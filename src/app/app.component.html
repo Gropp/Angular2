@@ -41,24 +41,19 @@
   >Par: {{count}}</li>
 </ul>
 <hr/>
-<h2 class="text-center">Usando o *ngFor</h2>
-<!-- faz um for com o contador pessoa que vai atuar sobre o objetos pessoas -->
-<ul class="list-group mx-auto my-6 col-6">
-  <li class="list-group-item"
-      *ngFor="let pessoa of pessoas">
-      O Nome da pessoa é {{ pessoa.nome }} {{ pessoa.sobrenome }}
-  </li>
-</ul>
+<!-- chamando um componente para listar os usuarios -->
+<app-list-people></app-list-people>
 <hr/>
+<!-- colocando localmente o codigo -->
 <h2 class="text-center">Vendo o ngFor sem o *</h2>
 <!-- vendo o ngFor por debaixo do tapete -->
 <!-- o * é uma referencia para o ng-template -->
 <ul class="list-group mx-auto my-6 col-6">
   <ng-template ngFor let-pessoa [ngForOf]="pessoas">
     <li class="list-group-item">
-      O Nome da pessoa é {{ pessoa.nome }} {{ pessoa.sobrenome }}
+      O Nome da pessoa é {{ pessoa.firstName }} {{ pessoa.lastName }} e ela tem {{ pessoa.age }} anos.
     </li>
-  </ng-template>  
+  </ng-template>
 </ul>
 <hr/>
 <div class="col-4 mx-auto">

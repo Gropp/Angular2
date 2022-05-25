@@ -7,19 +7,24 @@ import { ApplicationModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MarcaTextoDirective } from './shared/directives/marca-texto.directive';
+import { PeopleService } from './shared/services/people.service';
+import { ListPeopleComponent } from './shared/components/list-people/list-people.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MarcaTextoDirective
+    MarcaTextoDirective,
+    ListPeopleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ApplicationModule,
     CommonModule,
     FormsModule
   ],
-  providers: [],
+  // quando vc cria um modulo que provem um servico, vc precisa informar isso para a aplicacao para que seja usado
+  providers: [PeopleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

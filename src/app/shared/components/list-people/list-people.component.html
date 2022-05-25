@@ -1,0 +1,9 @@
+<h2 class="text-center">Usando o *ngFor</h2>
+<!-- faz um for com o contador pessoa que vai atuar sobre o objetos pessoas -->
+<!-- agora chamo o metodo do appcomponent para ler o array pessoas -->
+<ul class="list-group mx-auto my-6 col-6">
+  <li class="list-group-item"
+      *ngFor="let pessoa of pessoas">
+      O Nome da pessoa é {{ pessoa.firstName }} {{ pessoa.lastName }} e ela tem {{ pessoa.age }} anos.
+  </li>
+</ul>
