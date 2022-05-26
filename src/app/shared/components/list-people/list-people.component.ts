@@ -19,6 +19,7 @@ export class ListPeopleComponent implements OnInit {
   ];
   //como esse componente vai listar as pessoas disponibilizadas no servico peopleservice
   //é preciso chamar o servico no constructor do component
+  //injecao de dependencias
   constructor(private peopleService: PeopleService) { }
 
   ngOnInit(): void {

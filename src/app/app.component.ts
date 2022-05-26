@@ -24,6 +24,7 @@ export class AppComponent implements OnInit{
   ];
   // no construtor vc chama o servico criado
   // ao passar o servico como parametro para o construtor, vc disponibiliza para esse componente o servico
+  // injecao  de dependencias
   constructor(private peopleService: PeopleService) {}
   // implementa esse ciclo de vido do componente
   // metodo inicia quando o componente abrir
